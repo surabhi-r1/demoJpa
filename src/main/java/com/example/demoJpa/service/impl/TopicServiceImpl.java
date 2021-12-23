@@ -6,16 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class TopicServiceImpl implements com.example.demoJpa.service.TopicService {
     @Autowired
-    private final TopicRepository topicRepository;
+    private TopicRepository topicRepository;
 
 
-    public TopicServiceImpl(TopicRepository topicRepository) {
+    public TopicServiceImpl() {
         this.topicRepository = topicRepository;
     }
 

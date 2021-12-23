@@ -2,7 +2,6 @@ package com.example.demoJpa.controller;
 
 import com.example.demoJpa.entity.TopicEntity;
 import com.example.demoJpa.service.TopicService;
-import com.example.demoJpa.service.impl.TopicServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,8 +27,9 @@ public class TesController {
     }
 
     @PostMapping
-    public void addTopic(@RequestBody TopicEntity topic) {
-        topicService.addTopic(topic);
+    public void addTopic(@RequestBody TopicEntity topicEntity,@PathVariable String id)
+    {
+        topicService.addTopic(topicEntity);
     }
 
     @PutMapping(value = "/{id}")
